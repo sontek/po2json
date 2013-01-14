@@ -45,7 +45,7 @@ def main():
     locale_path = sys.argv[1]
     # arg 2: Output path
     output_path = sys.argv[2]
-    # arg 4: Translation Domain
+    # arg 3: Translation Domain
     domain = sys.argv[3]
 
     for lang_code in os.listdir(locale_path):
