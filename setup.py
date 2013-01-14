@@ -32,8 +32,8 @@ requires = [
 ]
 
 setup(name='po2json',
-    version='0.1',
-    description='Generic user registration for pyramid',
+    version='0.2',
+    description='Converts gettext .po files to javascript objects',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Intended Audience :: Developers',
