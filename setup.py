@@ -58,6 +58,6 @@ setup(name='po2json',
     test_suite='po2json'
     , entry_points="""\
       [console_scripts]
-      po2json = po2son:main
+      po2json = po2json:main
       """
 )
