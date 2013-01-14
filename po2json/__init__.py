@@ -1,13 +1,24 @@
-from __future__ import with_statement
+from __future__ import (
+    absolute_import
+    , division
+    , print_function
+    , with_statement
+)
+
 from babel.messages.pofile import read_po
-from simplejson import dumps
+
+try:
+    import simplejson as json
+except ImportError: 
+    import json
+
 
 import os
 import sys
 
 
 def compile_to_js(po_file, lang, domain):
-    print 'Compiling JavaScript for %s' % po_file
+    print('Compiling JavaScript for %s' % po_file)
 
     jscatalog = {}
 
@@ -20,7 +31,7 @@ def compile_to_js(po_file, lang, domain):
                 msgid = msgid[0]
             jscatalog[msgid] = message.string
 
-    return dumps(dict(
+    return json.dumps(dict(
         messages=jscatalog,
         plural_expr=catalog.plural_expr,
         locale=str(catalog.locale),
