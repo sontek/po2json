@@ -9,7 +9,7 @@ from babel.messages.pofile import read_po
 
 try:
     import simplejson as json
-except ImportError: 
+except ImportError:
     import json
 
 
@@ -22,7 +22,7 @@ def compile_to_js(po_file, lang, domain):
 
     jscatalog = {}
 
-    with file(po_file) as f:
+    with open(po_file) as f:
         catalog = read_po(f, locale=lang, domain=domain)
 
         for message in catalog:
