@@ -31,7 +31,7 @@ requires = [
 ]
 
 setup(name='po2json',
-    version='0.2.1',
+    version='0.2.2',
     description='Converts gettext .po files to javascript objects',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
